@@ -1,0 +1,74 @@
+<div class="box-white d-flex charts">
+    <div class="flex-1">
+        <div class="chart-details">
+            <div class="flex-1">
+                <h5 class="title">Active Vehicles Vs. In-Active Vehicles</h5>
+            </div>
+            <div class="flex-1 chart-description">
+                <p><span class="square"></span>Active Vehicles</p>
+                <p><span class="square square-inactive"></span>In-Active Vehicles</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex-2">
+        <canvas class="canvas" baseChart [type]="'pie'" [labels]="pieChartLabels"
+            [options]="pieChartOptions" [data]="barChartData">
+        </canvas>
+    </div>
+</div>
+<div class="d-flex">
+    <div class="flex-1">
+        <div class="box-white dashboard-box">
+            <div class="box-image">
+                <img src="../../../assets/images/total-violations.png">
+                <div class="box-value">
+                    2,108
+                </div>
+                <div class="box-label">
+                    Total Violations
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-1">
+        <div class="box-white dashboard-box">
+            <div class="box-image">
+                <img src="../../../assets/images/total-dectations.png">
+                <div class="box-value">
+                    2,108
+                </div>
+                <div class="box-label">
+                    Total Violations
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex">
+    <div class="flex-1">
+        <div class="box-white dashboard-box">
+            <div class="box-image">
+                <img src="../../../assets/images/total-active-vehicles.png">
+                <div class="box-value">
+                    2,108
+                </div>
+                <div class="box-label">
+                    Total Violations
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-1">
+        <div class="box-white dashboard-box">
+            <div class="box-image">
+                <img src="../../../assets/images/total-distance-in-km.png">
+                <div class="box-value">
+                    2,108
+                </div>
+                <div class="box-label">
+                    Total Violations
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

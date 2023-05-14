@@ -1,0 +1,107 @@
+@import "assets/fonts/fonts.css";
+
+// %transition {transition: background .35s ease;}
+
+body {
+    margin: 0;
+    font: normal normal normal 14px/24px "Frutiger LT Pro 55 Roman";
+}
+
+.font-bold-65 {
+    font: normal normal bold 20px/24px "Frutiger LT Pro 65 Bold";
+}
+
+.font-bold-900 {
+    font: normal normal 900 24px/24px "Frutiger LT Pro 65 Bold";
+}
+
+.ar-font {
+    font-family: "Janna LT Bold" !important;
+}
+
+.d-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+.flex-2 {
+    flex: 2;
+}
+.justify-content-end {
+    justify-content: flex-end;
+}
+.align-items-center {
+    align-items: center;
+}
+
+.box-white {
+    background-color: white;
+    border-radius: 20px;
+    // padding: 10px 10px 10px 5px;
+    padding: 5px 20px 0px 20px;
+}
+
+
+.i-titel {
+    color: #b5becf;
+    border: 2px solid #b5becf;
+    border-radius: 10px;
+    padding: 0px 9px;
+    font-size: 18px;
+}
+
+.title-tip[title]:hover {
+    position: relative;
+  }
+  .title-tip[title]:hover:before {
+    position: absolute;
+    top: 100%;
+    left: -30px;
+    z-index: 99999;
+    content: attr(title);
+    margin-top: 0.5em;
+    padding: 0.5em;
+    width: 300px; 
+    overflow: hidden;
+    word-wrap: break-word;
+    font-size: 14px;
+    color: #65769C;
+    background-color: white;
+    // box-sizing: border-box;
+    // box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 30px #1785c61a;
+    border-radius: 10px;
+  }
+  .title-tip[title]:hover:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 99999;
+    content: '';
+    margin-left: -0.125em;
+    width: 0;
+    height: 0;
+    border: 0.25em dashed transparent;
+    border-bottom: 0.25em solid red;
+    font-size: inherit;
+  }
+  
+  /* title-tip-up */
+  .title-tip-up[title]:hover:before {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  .title-tip-up[title]:hover:after {
+    top: -15px;
+    left: 2px;
+    bottom: 100%;
+    border: 0.7em dashed transparent;
+    border-top: 0.6em solid white;
+    box-shadow: 0px 10px 30px #1785c61a;
+  }
+  

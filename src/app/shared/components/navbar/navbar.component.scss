@@ -1,0 +1,331 @@
+nav {
+    // height: 60px;
+    // background-color: red;
+    padding: 20px 0;
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        // align-items: center;
+        margin: 0;
+        padding: 0 25px;
+        height: 60px;
+    }
+    li {
+        list-style-type: none;
+        margin: 0 5px;
+        z-index: 100;
+    }
+    li:nth-of-type(1) {
+        flex: 1 0 auto;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    .logo-text {
+        color: #081836;
+        font-size: 36px;
+        font-family: "Frutiger LT Pro 65 Bold";
+    }
+}
+
+.search {
+    position: relative;
+    input {
+        background-color: #f6f8fd;
+        padding: 21px;
+        border-radius: 20px;
+        border: 0;
+        font-size: 20px;
+        width: 339px;
+        &:active,
+        &:focus {
+            border: 0;
+            outline: 0;
+        }
+    }
+    &::after {
+        content: "\f002";
+        position: absolute;
+        color: #1785c6;
+        font-size: 30px;
+        right: 0;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-style: normal;
+        right: 20px;
+        top: 20px;
+    }
+    ::placeholder {
+        color: #0c1834;
+        // color: red;
+        opacity: 40%;
+    }
+}
+
+.box {
+    background-color: #f6f8fd;
+    // padding: 20px;
+    width: 67px;
+    height: 67px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .world-img {
+        width: 26px;
+        height: 26px;
+    }
+    .box-icon {
+        i {
+            font-size: 28.8px !important;
+            color: #1785c6;
+        }
+    }
+}
+.user-actions {
+    .user-info {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        // width: 250px;
+        border-radius: 20px;
+        cursor: pointer;
+        // background-color: red;
+        &:hover {
+            background-color: #f6f8fd;
+        }
+        .user-image {
+            margin-bottom: -5px;
+            img {
+                border-radius: 20px;
+                width: 67px;
+                height: 65px;
+            }
+        }
+        .user-name {
+            color: #081836;
+            font-size: 20px;
+            .user-role {
+                color: #687599;
+                font-size: 16px;
+            }
+            span {
+                display: block;
+            }
+        }
+    }
+}
+.user-actions-menu-closed {
+    // height: 0;
+    transition: all 0.1s ease-out;
+}
+.user-actions-menu-opend {
+    box-shadow: 0px 8px 30px #083f5f3d;
+    border-radius: 20px;
+    height: 245px;
+    transition: all 0.2s ease-out;
+    z-index: 100;
+    background-color: white;
+    .user-info {
+        &:hover {
+            background-color: unset;
+        }
+    }
+    .actions {
+        hr {
+            border: 1px solid #ebf0f6;
+        }
+        ul {
+            padding: 0px 5px;
+            display: flex;
+            flex-direction: column;
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                height: fit-content;
+                position: relative;
+                padding: 13px 15px;
+                i {
+                    color: #6a7596;
+                    font-size: 20px;
+                }
+                span {
+                    color: #65769c;
+                    font-size: 14px;
+                }
+                &::after {
+                    content: "\f054";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    font-style: normal;
+                    font-size: 16px;
+                    color: #333;
+                    right: 10px;
+                    position: absolute;
+                    top: 15px;
+                    font-size: 13.5px;
+                }
+                &:hover {
+                    background-color: #f6f8fd;
+                    color: #5083c9;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    span,
+                    i {
+                        color: #5083c9 !important;
+                    }
+                    &::after {
+                        content: "\f054";
+                        font-family: "Font Awesome 5 Free";
+                        color: #5083c9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.notifications-box {
+    position: relative;
+    .notifications-list {
+        display: none;
+        // transition: all 0.4s ease-out;
+        transition: opacity 5s ease-out;
+        opacity: 0;
+        position: absolute;
+        box-shadow: 0px 8px 30px #083f5f3d;
+        border-radius: 0px 0px 20px 20px;
+        background-color: white;
+        width: 430px;
+        height: 345px;
+        right: 0;
+        top: 80px;
+        .notification {
+            display: flex;
+            padding: 13px 15px;
+            gap: 10px;
+            .notification-image {
+                flex: 1;
+                span {
+                    background-color: #f6f8fe;
+                    border-radius: 20px;
+                    width: 70px;
+                    height: 70px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .fa-bell {
+                        font-size: 30px;
+                        color: #ffaf00;
+                    }
+                }
+            }
+            .notification-text {
+                flex: 4;
+                .notification-title {
+                    font-size: 20px;
+                    font-family: "Frutiger LT Pro 65 Bold";
+                    color: #0c1834;
+                }
+                .notification-desc {
+                    color: #65769c;
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin-top: 7px;
+                }
+            }
+            .notification-time {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+                .time {
+                    color: #65769c;
+                    font-size: 12px;
+                    opacity: 60%;
+                }
+                .show {
+                    color: #5a89d8;
+                    font-size: 15px;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    i {
+                        font-size: 12px;
+                        padding-left: 3px;
+                    }
+                }
+            }
+        }
+        hr {
+            border: 1px solid #0087cc;
+            opacity: 10%;
+            margin: 0px 20px;
+        }
+        .see-all {
+            color: #5a89d8;
+            font-size: 15px;
+            text-decoration: underline;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 10px;
+        }
+    }
+}
+
+.show-notification-box {
+    .notifications-list {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.lang-box {
+    position: relative;
+    .lang-list {
+        display: none;
+        transition: opacity 5s ease-out;
+        opacity: 0;
+        position: absolute;
+        box-shadow: 0px 8px 30px #083f5f3d;
+        border-radius: 0px 0px 20px 20px;
+        background-color: white;
+        width: 150px;
+        height: 123px;
+        right: 0;
+        top: 80px;
+        hr {
+            border: 1px solid #0087cc;
+            opacity: 10%;
+            margin: 0px 22px;
+        }
+        .lang {
+            font-size: 18px;
+            font-family: "Frutiger LT Pro 65 Bold";
+            padding: 20px 65px;
+            text-align: center;
+            position: relative;
+            span {
+                position: absolute;
+                left: 25px;
+                img {
+                    width: 26px;
+                    height: 16px;
+                    border-radius: 5px;
+                    margin-inline-end: 10px;
+                }
+            }
+        }
+    }
+}
+
+.show-lang-box {
+    .lang-list {
+        display: block;
+        opacity: 1;
+    }
+}

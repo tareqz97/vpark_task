@@ -1,0 +1,73 @@
+.title {
+    font: normal normal bold 24px/30px "Frutiger LT Pro 65 Bold";
+}
+
+.charts {
+    height: 315px;
+    padding: 5px 37px 0px 40px;
+}
+
+.canvas {
+    margin-top: 1.2rem;
+    display: block;
+    box-sizing: border-box;
+    height: 270px;
+    width: 270px;
+}
+
+.chart-details {
+    display: flex;
+    flex-direction: column;
+    // background: aqua;
+    height: 87%;
+    justify-content: space-around;
+    margin: 20px 0;
+    h5 {
+        margin-top: 0;
+    }
+
+    .chart-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        p {
+            margin: 0;
+            color: #6d7485;
+            font: normal normal normal 14px/29px "Frutiger LT Pro 55 Roman";
+            .square {
+                position: relative;
+                margin-inline-end: 30px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-color: #1785c6;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    top: -3px;
+                }
+            }
+            .square-inactive{
+                &::before{
+                    background-color: #BFE7FF;
+                }
+            }
+        }
+    }
+}
+
+.dashboard-box {
+    height: 240px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .box-value {
+        font: normal normal bold 26px/27px "Frutiger LT Pro 65 Bold";
+    }
+    .box-label {
+        color: #6d7485;
+        font: normal normal normal 20px/29px "Frutiger LT Pro 55 Roman";
+    }
+}

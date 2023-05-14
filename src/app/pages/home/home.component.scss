@@ -1,0 +1,70 @@
+.home-container {
+    background-color: #e7f0f9;
+    border-top-left-radius: 20px;
+    padding: 2px 25px 70px 25px;
+    z-index: -1;
+    // padding-bottom: 70px;
+    .title {
+        margin-bottom: 20px;
+    }
+    .first-section{
+        display: flex;
+        gap: 20px;
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.view-in-snap {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    background-image: url(../../../assets/images/view-in-snap.png);
+    // background-size: 100% 215px;
+    background-repeat: no-repeat;
+    height: 215px;
+    // background-size: 100%;
+    background-size: 100% 215px;
+    position: relative;
+    .description {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        padding: 0 70px;
+        .title {
+            color: white;
+            font: normal normal 900 40px/37px "Frutiger LT Pro 65 Bold";
+            margin-bottom: 10px;
+            span {
+                color: #f9b419;
+            }
+        }
+        .sub-title {
+            color: #ffffff;
+            font-size: 20px;
+            opacity: 70%;
+        }
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     background-image: url(../../../assets/images/setting-image.png);
+        //     height: 270px;
+        //     right: 0;
+        //     width: 10px;
+        //     width: 30%;
+        //     background-size: 86%;
+        //     background-repeat: no-repeat;
+        //     top: -55px;
+        // }
+    }
+    .setting-image {
+        position: absolute;
+        right: 15px;
+        top: -53px;
+        img {
+            width: 375px;
+        }
+    }
+}

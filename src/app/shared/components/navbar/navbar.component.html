@@ -1,0 +1,137 @@
+<nav>
+    <ul>
+        <li class="logo">
+            <img src="../../../../assets/images/logo.png"> <span class="logo-text">Logo</span>
+        </li>
+        <li class="search">
+            <input placeholder="Search">
+        </li>
+        <li class="lang-box" [class.show-lang-box]="showLangBox" (click)="showLangBox = !showLangBox;showNotificationBox = false">
+            <div class="box">
+                <span class="box-icon">
+                    <i class="fa-solid fa-globe"></i>
+                </span>
+            </div>
+            <div class="lang-list">
+                <div class="lang">  
+                    <span><img src="../../../../assets/images/Flag_of_the_United_Kingdom.png"></span>English
+                </div>
+                <hr>
+                <div class="lang ar-font">  
+                    <span><img src="../../../../assets/images/united-arab-emirates-flag-icon.png"></span>عربي
+                </div>
+            </div>
+        </li>
+        <li class="notifications-box" (click)="showNotificationBox = !showNotificationBox;showLangBox = false" [class.show-notification-box]="showNotificationBox">
+            <div class="box">
+                <span class="box-icon">
+                    <i class="fa-solid fa-bell"></i>
+                </span>
+            </div>
+            <div class="notifications-list">
+                <div class="notification">
+                    <div class="notification-image">
+                        <span>
+                            <i class="fa-solid fa-bell"></i>
+                        </span>
+                    </div>
+                    <div class="notification-text">
+                        <div class="notification-title">
+                            GIS Data Request
+                        </div>
+                        <div class="notification-desc">
+                            Ahmad Khalil is Waiting for approval to Add New GIS Data
+                        </div>
+                    </div>
+                    <div class="notification-time">
+                        <span class="time">
+                            12:08 PM
+                        </span>
+                        <span class="show">
+                            Show<i class="fa-solid fa-angle-right"></i>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="notification">
+                    <div class="notification-image">
+                        <span>
+                            <i class="fa-solid fa-bell"></i>
+                        </span>
+                    </div>
+                    <div class="notification-text">
+                        <div class="notification-title">
+                            GIS Data Request
+                        </div>
+                        <div class="notification-desc">
+                            Ahmad Khalil is Waiting for approval to Add New GIS Data
+                        </div>
+                    </div>
+                    <div class="notification-time">
+                        <span class="time">
+                            12:08 PM
+                        </span>
+                        <span class="show">
+                            Show<i class="fa-solid fa-angle-right"></i>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="notification">
+                    <div class="notification-image">
+                        <span>
+                            <i class="fa-solid fa-bell"></i>
+                        </span>
+                    </div>
+                    <div class="notification-text">
+                        <div class="notification-title">
+                            GIS Data Request
+                        </div>
+                        <div class="notification-desc">
+                            Ahmad Khalil is Waiting for approval to Add New GIS Data
+                        </div>
+                    </div>
+                    <div class="notification-time">
+                        <span class="time">
+                            12:08 PM
+                        </span>
+                        <span class="show">
+                            Show<i class="fa-solid fa-angle-right"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="see-all">
+                    <a>See All</a>
+                </div>
+            </div>
+        </li>
+        <li (click)="openUserActions = !openUserActions" style="width: 250px;">
+            <div class="user-actions" ngClass="{{openUserActions ? 'user-actions-menu-opend' : 'user-actions-menu-closed'}}">
+                <div class="user-info">
+                    <div class="user-image">
+                        <img src="../../../../assets/images/user-image.jpeg">
+                    </div>
+                    <div class="user-name">
+                        <span class="font-bold">John Doe</span>
+                        <span class="user-role">Admin</span>
+                    </div>
+                </div>
+                <div class="actions" *ngIf="openUserActions">
+                    <hr>
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-user"></i>
+                            <span>My Account</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-gear"></i> <span>Settings</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-power-off"></i> <span>Logout</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,91 @@
+
+<div class="box-white">
+    <div class="d-flex align-items-center main-title">
+        <div class="flex-1">
+            <h4 class="title">VPark Fleet</h4>
+        </div>
+        <div class="flex-1 d-flex justify-content-end view-type-container">
+            <div class="view-type-box">
+                <img src="../../../assets/images/sequers.svg">
+            </div>
+            <div class="view-type-box">
+                <img src="../../../assets/images/Group 79024.svg">
+            </div>
+        </div>
+    </div>
+    <div class="vehicles">
+        <div *ngFor="let vehicle of vehiclesList">
+            <div class="vehicle" [class.vehicle-open]="vehicle.showDetails" (click)="closeAll(vehicle);vehicle.showDetails = !vehicle.showDetails">
+                <div class="vehicle-info">
+                    <div class="vehicle-img">
+                        <img src="../../../assets/images/vehicle.svg">
+                    </div>
+                    <div class="vehicle-name">
+                        <span class="status" [class.status-warning]="vehicle.status == 'warning'" [class.status-danger]="vehicle.status == 'danger'"></span>{{vehicle.name}}
+                    </div>
+                </div>
+                <div class="vehicle-details d-flex">
+                    <div class="flex-1">
+                        <div>
+                            <img src="../../../assets/images/camera.svg">
+                        </div>
+                        <div class="label">
+                            Camera
+                        </div>
+                        <div class="value">
+                            {{vehicle.camera.isOnline ? "Online" : "Ofline"}}
+                        </div>
+                        <div class="status">
+                            
+                            {{vehicle.camera.isActive ? "Active" : "Inactive"}}
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div>
+                            <img src="../../../assets/images/wifi.svg">
+                        </div>
+                        <div class="label">
+                            Network
+                        </div>
+                        <div class="value">
+                            {{vehicle.network.isAvailable ? "Available" : "Unavailable"}}
+                        </div>
+                        <div class="status">
+                            {{vehicle.network.isActive ? "Active" : "Inactive"}}
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div>
+                            <img src="../../../assets/images/memory.svg">
+                        </div>
+                        <div class="label">
+                            Memory
+                        </div>
+                        <div class="value">
+                            {{vehicle.memory.value}}%
+                        </div>
+                        <div class="status">
+                            {{vehicle.memory.status}}
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex-1">
+                            <div>
+                                <img src="../../../assets/images/cpu.svg">
+                            </div>
+                            <div class="label">
+                                CPU
+                            </div>
+                            <div class="value">
+                                {{vehicle.cpu.value}}<sup>o</sup>
+                            </div>
+                            <div class="status danger-status">
+                                {{vehicle.cpu.status}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<nav class="side-nav">
+    <ul>
+        <li class="nav-item" *ngFor="let item of sideBarList"  [routerLink]="item.routerLink" routerLinkActive="active">
+            <span>
+                <i class="fa-solid {{item.icon}}"></i>
+            </span>
+            {{item.label}}
+            <span class="indicator"></span>
+        </li>
+    </ul>
+    <div class="need-help">
+        <div class="title">
+            Need Help?
+        </div>
+        <div class="desc">
+            Click here to find <br> Functionalities, Help, and More!
+        </div>
+        <div class="discover">
+            <button>Discover</button>
+        </div>
+    </div>
+</nav>

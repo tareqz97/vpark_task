@@ -1,0 +1,167 @@
+.box-white {
+    height: 830px;
+    padding: 10px 30px;
+}
+.main-title{
+    margin-top: 20px;
+}
+.title {
+    font: normal normal bold 24px/24px "Frutiger LT Pro 65 Bold";
+    margin: 0px;
+}
+.view-type-container {
+    gap: 10px;
+    .view-type-box {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #f6f8fd;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        img {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 10px;
+        }
+    }
+}
+
+.vehicles {
+    height: 46rem;
+    overflow: auto;
+    padding-top: 5px;
+    .vehicle {
+        transition: all 0.4s ease-out;
+        cursor: pointer;
+        background-color: #f6f8fe;
+        border-radius: 10px;
+        height: 73px;
+        margin: 15px 0;
+        position: relative;
+        &::after {
+            content: "\f107";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-style: normal;
+            font-size: 16px;
+            color: #1785c6;
+            right: 30px;
+            position: absolute;
+            top: 25px;
+            font-size: 25px;
+            text-shadow: 0px 3px 7px #1785c6;
+            transition: all 0.4s ease-out;
+        }
+        .vehicle-info {
+            position: relative;
+            height: 73px;
+            .vehicle-img {
+                position: absolute;
+                top: -12px;
+                transition: all 0.4s ease-out;
+            }
+            .vehicle-name {
+                position: absolute;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                // left: 120px;
+                padding-inline-start: 120px;
+                font-size: 16px;
+                .status {
+                    width: 15px;
+                    height: 15px;
+                    background-color: #00ab80;
+                    border-radius: 50%;
+                    margin-right: 8px;
+                }
+                .status-warning {
+                    background-color: #f9b317;
+                }
+                .status-danger {
+                    background-color: #e63438;
+                }
+            }
+        }
+
+        .vehicle-details {
+            // visibility: hidden;
+            margin: 40px;
+            display: none;
+            .flex-1 {
+                height: 120px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .label {
+                color: #6d7485;
+                font-size: 12px;
+            }
+            .value {
+                font: normal normal bold 16px/19px "Frutiger LT Pro 65 Bold";
+            }
+            .status {
+                margin-top: 5px;
+                background: rgba(0, 174, 125, 0.1) 0% 0% no-repeat padding-box;
+                border-radius: 15px;
+                color: #00ae7d;
+                width: 60px;
+                padding: 0px 10px;
+                font-size: 12px;
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 9px;
+                    height: 9px;
+                    background-color: #00ae7d;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 10px;
+                    top: 8px;
+                }
+            }
+            .danger-status {
+                color: #e63438;
+                // background-color: #E63438;
+                // opacity: 0.1;
+                background-color: rgba(230, 52, 56, 0.1);
+                // background-color: #B16D0052;
+                &::after {
+                    background-color: #e63438;
+                }
+            }
+        }
+    }
+
+    .vehicle-open {
+        height: 275px;
+        transition: all 0.4s ease-out;
+        .vehicle-info {
+            .vehicle-img {
+                position: absolute;
+                top: -20px;
+                transition: all 0.4s ease-out;
+            }
+        }
+        &::after {
+            rotate: 180deg;
+            transition: all 0.4s ease-out;
+        }
+        .vehicle-details {
+            // visibility: visible;
+            display: flex;
+        }
+    }
+}
+
+.vehicles {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+.vehicles::-webkit-scrollbar { 
+    display: none; 
+}
